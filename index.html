@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h3>Uploading your name to server...</h3>
+    </div>
+    <div class="hero-bg">
+        <section class="top">
+            <header>
+                <a href="#">My Portfolio</a>  
+            </header>
+
+            <h1><span>The Only</span> Long Experience </h1>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae beatae unde provident autem laboriosam. Veritatis assumenda modi asperiores corporis sapiente aut doloribus unde nesciunt. Quos vitae deserunt sequi. Quo, itaque!</p>
+        
+            <div class="form-container">
+                <form action="">
+
+                    <div class="form-left">
+                        <label for="name">Enter your name</label>
+                        <input type="text" name="your-name" id="name">
+                        <p>Example: "John Doe"</p>
+                    </div>
+
+                    <input type="button" value="Submit Your Name" id="cta-btn">
+                </form>
+            </div>
+        </section>
+    </div>
+    <section class="authentic">
+        <div class="right-col">
+            <h2>Authentic. Me.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae ullam sapiente hic aspernatur minima voluptas dignissimos distinctio magnam? Cupiditate odio voluptas vel sit architecto tempore suscipit autem harum similique!</p>
+        </div>
+
+        <img src="images\me.jpg" alt="Picture of Long">
+    </section>
+
+    <script>
+        let btn = document.getElementById('cta-btn');
+        let overlay = document.getElementById('overlay');
+
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'grid';
+            overlay.classList.add('animate-overlay');
+            
+            setTimeout(function () {
+                overlay.style.display = "none";
+                overlay.classList.remove("animate-overlay");
+            }, 3000);           
+        })  
+
+    </script>
+</body>
+</html>
